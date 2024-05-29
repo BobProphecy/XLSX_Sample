@@ -1,0 +1,60 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: CUSTOMER_ID
+    type: decimal(38,0)
+    nullable: true
+    metadata:
+      description: Unique identifier for the customer
+      mappings: []
+      tags: []
+  - name: FIRST_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: The first name of the customer
+      mappings: []
+      tags: []
+  - name: LAST_NAME
+    type: string
+    nullable: true
+    metadata:
+      description: The last name of the customer
+      mappings: []
+      tags: []
+  - name: PHONE
+    type: string
+    nullable: true
+    metadata:
+      description: Phone number associated with the customer
+      mappings: []
+      tags: []
+  - name: EMAIL
+    type: string
+    nullable: true
+    metadata:
+      description: The email address associated with the customer's account
+      mappings: []
+      tags: []
+  - name: COUNTRY_CODE
+    type: string
+    nullable: true
+    metadata:
+      description: The country code associated with the customer's location
+      mappings: []
+      tags: []
+  - name: ACCOUNT_OPEN_DATE
+    type: date
+    nullable: true
+    metadata:
+      description: The date when the customer's account was opened
+      mappings: []
+      tags: []
+  - name: ACCOUNT_FLAGS
+    type: string
+    nullable: true
+    metadata:
+      description: Flags associated with the customer's account
+      mappings: []
+      tags: []

@@ -20,11 +20,66 @@ pipelines:
     language: python
     createdAt: '2024-05-29 16:22:43'
     datasets:
-      inputs: []
-      outputs: []
+      inputs:
+      - datasets/snow_customers
+      - datasets/xlsx_orders
+      outputs:
+      - datasets/dbx_sales_rollup
     subgraphs: []
     dependencies: {}
-datasets: {}
+datasets:
+  datasets/xlsx_test:
+    name: xlsx_test
+    description: ''
+    author: bob.welshmer@gmail.com
+    createdAt: '2024-05-29 16:43:47'
+    mode: batch
+    physicalDatasets:
+      DBX-Prophecy:
+        fabricId: 12989
+        datasetType: File
+        description: ''
+        author: bob.welshmer@gmail.com
+        createdAt: '2024-05-29 16:43:47'
+  datasets/xlsx_orders:
+    name: xlsx_orders
+    description: ''
+    author: bob.welshmer@gmail.com
+    createdAt: '2024-05-29 16:47:03'
+    mode: batch
+    physicalDatasets:
+      DBX-Prophecy:
+        fabricId: 12989
+        datasetType: File
+        description: ''
+        author: bob.welshmer@gmail.com
+        createdAt: '2024-05-29 16:47:03'
+  datasets/snow_customers:
+    name: snow_customers
+    description: ''
+    author: bob.welshmer@gmail.com
+    createdAt: '2024-05-29 16:57:19'
+    mode: batch
+    physicalDatasets:
+      DBX-Prophecy:
+        fabricId: 12989
+        datasetType: Warehouse
+        description: ''
+        author: bob.welshmer@gmail.com
+        createdAt: '2024-05-29 16:57:19'
+  datasets/dbx_sales_rollup:
+    name: dbx_sales_rollup
+    description: ''
+    author: bob.welshmer@gmail.com
+    createdAt: '2024-05-29 17:03:31'
+    mode: batch
+    physicalDatasets:
+      DBX-Prophecy:
+        fabricId: 12989
+        datasetType: Database
+        description: ''
+        author: bob.welshmer@gmail.com
+        createdAt: '2024-05-29 17:03:31'
 templates: {}
 jobs: {}
 gemContainer:
@@ -55,12 +110,30 @@ dependencies:
   id: '438932062'
   createdAt: '2024-05-29T16:22:43.967919Z'
   type: plibMaven
+  enabled: true
+  entity: Project
 - modifiedAt: '2024-05-29T16:22:43.967919Z'
   name: plibPypi
   version: 1.8.19
   id: '1906871951'
   createdAt: '2024-05-29T16:22:43.967919Z'
   type: plibPypi
+  enabled: true
+  entity: Project
+- description: com.crealytics:spark-excel_2.12:3.5.0_0.20.3
+  id: hXB8vprkeDmfaWcQflmjp
+  editable: true
+  enabled: true
+  coordinates: com.crealytics:spark-excel_2.12:3.5.0_0.20.3
+  type: coordinates
+  name: spark-excel
+  scope: Project
+  package: ''
+  version: ''
+  exclusions: []
+  entity: Project
+  modifiedAt: '2024-05-29T16:24:15.677Z'
+  createdAt: '2024-05-29T16:24:15.677Z'
 projectDependencies:
   '12654':
     projectUID: 12654
